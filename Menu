@@ -1,0 +1,179 @@
+ESTRUTURA MENU
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./principal.css">
+</head>
+<body>
+    <button class="botao-menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+   
+    <nav class="menu-lateral">
+        <ul>
+            <li>
+                <a href="#">
+                <i class="fa-solid fa-house"></i>
+                Home
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-circle-info"></i>
+                Sobre
+                    </a>
+                </li>
+            <li>
+                <a href="#">
+                <i class="fa-solid fa-gears"></i>
+            Configurações
+                </a>
+            </li>
+            <li>
+                <a href="./perfil.html">
+                    <i class="fa-solid fa-circle-user"></i>
+                Perfil
+                </a>
+                </li>
+                <li>
+                    <div class="trilho">
+                        <div class="indicador"></div>
+                    </div>
+                </li>
+        </ul>
+    </nav>
+    
+    <div class="background"></div>
+
+    <main class="conteudo">
+        <h1>Menu Principal</h1>
+        <p>Teste menu Principal</p>
+    </main>
+</body>
+</html>
+
+
+
+
+
+
+CSS MENU
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ecf0f1;
+}
+
+.background {
+    min-height: 100vh;
+    background-image: url("./imagem.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 90%;
+}
+
+.menu-lateral {
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: hwb(0 15% 84%);
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}   
+
+.menu-lateral.ativo {
+    left: 0;
+
+}   
+
+.menu-lateral ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 90px;
+}
+
+.menu-lateral ul li {
+    padding: 15px 30px;
+
+}
+.menu-lateral ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.menu-lateral ul li:hover {
+    background-color: hsl(0, 0%, 41%);
+}
+
+.menu-lateral ul li a i:hover {
+    transform: translateX(5px) rotate(5deg);
+}
+
+
+.menu-lateral ul li a i {
+    font-size: 24px
+}
+
+.botao-menu {
+    background-color: hwb(0 41% 59%) ;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 3;
+    border-radius: 5px;
+    font-size: 24px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    color:black;
+    margin: 10px;
+}
+
+.botao-menu:hover {
+    background-color: hwb(0 21% 79%);
+}
+
+.botao-menu.ativo {
+    left: 320px;
+}
+
+.conteudo {
+    margin-left: 80px;
+    padding: 40px;
+    color: #ecf0f1;
+}
+
+.conteudo.ativo {
+    margin-left: 320px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
