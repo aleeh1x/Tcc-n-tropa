@@ -64,21 +64,22 @@ ESTRUTURA MENU
 CSS MENU
 
 
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #ecf0f1;
-}
-
-.background {
     min-height: 100vh;
     background-image: url("./imagem.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 90%;
+    z-index: -1;
 }
+
+
 
 .menu-lateral {
     position: fixed;
@@ -156,11 +157,14 @@ body {
     margin-left: 80px;
     padding: 40px;
     color: #ecf0f1;
+    min-height: 100vh;
 }
 
 .conteudo.ativo {
     margin-left: 320px;
 }
+
+
 
 
 
