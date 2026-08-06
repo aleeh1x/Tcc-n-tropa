@@ -1,0 +1,188 @@
+ESTRUTURA PERFIL
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="perfil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./principal.css">
+    <title>Perfil</title>
+</head>
+<body>
+    <main class="container">
+        <form>
+         <h1>Perfil</h1> 
+          <div class="foto">
+             <img src="./userwhite.png">
+        </div>
+         <div class="input-box">
+            <input placeholder="Name" Type="text">
+         </div>
+
+        <div class="input-box">    
+           <input placeholder="Sobrenome" type="text">
+         </div>
+
+        <div class="input-box">
+            <input placeholder="Telefone" type="tel" maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '')" inputmode="numeric" >
+        </div>
+
+        <div class="input-box">
+            <input placeholder="Data de Nascimento" type="date">
+        </div>
+
+        <div class="salvar">
+            <button type="submit">Salvar</button>
+        </div>
+        
+        <div class="reset">
+            <button type="submit"><a>Redefinir</a></button>
+        </div>
+
+
+        </form>
+   </main> 
+ 
+    <button class="botao-menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+   
+    <nav class="menu-lateral">
+        <ul>
+            <li>
+                <a href="./menu.html">
+                <i class="fa-solid fa-house"></i>
+                Home
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-circle-info"></i>
+                Sobre
+                    </a>
+                </li>
+            <li>
+                <a href="#">
+                <i class="fa-solid fa-gears"></i>
+            Configurações
+                </a>
+            </li>
+            <li>
+                <a href="./perfil.html">
+                    <i class="fa-solid fa-circle-user"></i>
+                Perfil
+                </a>
+                </li>
+                <li>
+                    <div class="trilho">
+                        <div class="indicador"></div>
+                    </div>
+                </li>
+        </ul>
+    </nav>
+    
+    <div class="background"></div>
+
+</body>
+</html>
+</body>
+</html>
+
+
+CSS PERFIL
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;    
+    background: url(backgroundpreto.avif);
+}
+
+.container {
+    border-radius: 40px;
+    background-color: transparent;
+    width: 600px;
+    border: 4px solid rgb(155, 155, 155);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: white;
+    padding: 30px 40px 20px 40px;
+}
+
+.container h1  {
+    font-size: 50px;
+    text-align: center;
+}
+
+.foto {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 15px;
+}
+.foto img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+}
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0px;
+    color: white;
+}
+.input-box input {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid hsl(0, 0%, 100%);
+  padding: 8px 0; 
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding: 20px 45px 20px 20px;
+  color: white;
+}
+
+.salvar button {
+    border-radius: 10px;
+    width: 75px;
+    height: 40px;
+    background-color: rgb(85, 85, 250);
+    float: right;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.reset button {
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    font-size: medium;
+    
+}
+.reset button a:hover {
+    text-decoration: underline;
+}
+
+
+
+
