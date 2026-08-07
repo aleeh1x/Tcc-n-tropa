@@ -7,7 +7,6 @@ ESTRUTURA PERFIL
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="perfil.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./principal.css">
     <title>Perfil</title>
 </head>
 <body>
@@ -45,45 +44,56 @@ ESTRUTURA PERFIL
         </form>
    </main> 
  
-    <button class="botao-menu">
-        <i class="fa-solid fa-bars"></i>
-    </button>
-   
-    <nav class="menu-lateral">
-        <ul>
-            <li>
-                <a href="./menu.html">
-                <i class="fa-solid fa-house"></i>
-                Home
+   <button class="botao-menu">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+<nav class="menu-lateral ativo ">
+    <ul>
+        <li>
+            <a href="./menu.html">
+            <i class="fa-solid fa-house"></i>
+            Home
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-robot"></i>
+            ChatBot
+            </a>
+            </li>
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-circle-info"></i>
+            Sobre
                 </a>
+            </li>
+        <li>
+            <a href="#">
+            <i class="fa-solid fa-gears"></i>
+        Configurações
+            </a>
+        </li>
+        <li>
+            <a href="./perfil.html">
+                <i class="fa-solid fa-circle-user"></i>
+            Perfil
+            </a>
+            </li>
+            <li>
+            <a href="#">
+                <i class="fa-regular fa-clock"></i>
+            Histórico
+            </a>
             </li>
             <li>
                 <a href="#">
-                    <i class="fa-solid fa-circle-info"></i>
-                Sobre
-                    </a>
-                </li>
-            <li>
-                <a href="#">
-                <i class="fa-solid fa-gears"></i>
-            Configurações
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    Sair
                 </a>
             </li>
-            <li>
-                <a href="./perfil.html">
-                    <i class="fa-solid fa-circle-user"></i>
-                Perfil
-                </a>
-                </li>
-                <li>
-                    <div class="trilho">
-                        <div class="indicador"></div>
-                    </div>
-                </li>
-        </ul>
-    </nav>
-    
-    <div class="background"></div>
+    </ul>
+</nav>
 
 </body>
 </html>
@@ -108,7 +118,83 @@ body {
     justify-content: center;
     min-height: 100vh;
     align-items: center;    
-    background: url(backgroundpreto.avif);
+    background: url(imagem.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.menu-lateral {
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: hwb(0 15% 84%);
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}   
+
+.menu-lateral.ativo {
+    left: 0;
+
+}   
+
+.menu-lateral ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 90px;
+}
+
+.menu-lateral ul li {
+    padding: 15px 30px;
+
+}
+.menu-lateral ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu-lateral ul li:hover {
+    background-color: hsl(0, 0%, 41%);
+}
+
+.menu-lateral ul li a i:hover {
+    transform: translateX(5px) rotate(5deg);
+}
+
+
+.menu-lateral ul li a i {
+    font-size: 24px
+}
+
+.botao-menu {
+    background-color: hwb(0 41% 59%) ;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 3;
+    border-radius: 5px;
+    font-size: 24px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    color:black;
+    margin: 10px;
+}
+
+.botao-menu:hover {
+    background-color: hwb(0 21% 79%);
+}
+
+.botao-menu.ativo {
+    left: 320px;
 }
 
 .container {
@@ -119,11 +205,14 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     color: white;
     padding: 30px 40px 20px 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .container h1  {
     font-size: 50px;
     text-align: center;
+    font: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .foto {
@@ -155,6 +244,7 @@ body {
   height: 100%;
   padding: 20px 45px 20px 20px;
   color: white;
+  border-radius: 10px;
 }
 
 .salvar button {
@@ -181,8 +271,7 @@ body {
 }
 .reset button a:hover {
     text-decoration: underline;
-}
-
+}  
 
 
 
