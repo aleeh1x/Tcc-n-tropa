@@ -13,14 +13,20 @@ ESTRUTURA MENU
         <i class="fa-solid fa-bars"></i>
     </button>
    
-    <nav class="menu-lateral">
+    <nav class="menu-lateral ativo ">
         <ul>
             <li>
-                <a href="#">
+                <a href="./menu.html">
                 <i class="fa-solid fa-house"></i>
                 Home
                 </a>
             </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-robot"></i>
+                ChatBot
+                </a>
+                </li>
             <li>
                 <a href="#">
                     <i class="fa-solid fa-circle-info"></i>
@@ -40,21 +46,31 @@ ESTRUTURA MENU
                 </a>
                 </li>
                 <li>
-                    <div class="trilho">
-                        <div class="indicador"></div>
-                    </div>
+                <a href="#">
+                    <i class="fa-regular fa-clock"></i>
+                Histórico
+                </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        Sair
+                    </a>
                 </li>
         </ul>
     </nav>
     
     <div class="background"></div>
-
+    <div class="container">
     <main class="conteudo">
         <h1>Menu Principal</h1>
         <p>Teste menu Principal</p>
+        <button class="conversar">Conversar com IA</button>
+    </div>
     </main>
 </body>
 </html>
+
 
 
 
